@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Programação Front End</title>
+</head>
+
+<body>
+    <div>
+ 
+        <img src="assets/interruptor.png" alt="interruptor para acender as lâmpadas">
+    </div>
+    <div>
+
+        <img src="assets/lampada.png" alt="Lâmpada ligado e desligada">
+        <img src="assets/lampada.png" alt="Lâmpada ligado e desligada">
+    </div>
+    <div>
+        <input type="name" name="nome" id="">
+        <input type="tel" name="telefone" id="">
+        <input type="email" name="email" id="">
+        <input type="date" name="data" id="">
+        <input type="button" value="finalizar">
+    </div>
+</body>
+
+</html>
