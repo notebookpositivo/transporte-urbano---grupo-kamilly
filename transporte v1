@@ -1,30 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Programação Front End</title>
+    <title>Página de Login</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.login-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#message {
+    margin-top: 10px;
+    color: red;
+}
+    </style>
 </head>
-
 <body>
-    <div>
- 
-        <img src="assets/interruptor.png" alt="interruptor para acender as lâmpadas">
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <div id="message"></div>
     </div>
-    <div>
-
-        <img src="assets/lampada.png" alt="Lâmpada ligado e desligada">
-        <img src="assets/lampada.png" alt="Lâmpada ligado e desligada">
-    </div>
-    <div>
-        <input type="name" name="nome" id="">
-        <input type="tel" name="telefone" id="">
-        <input type="email" name="email" id="">
-        <input type="date" name="data" id="">
-        <input type="button" value="finalizar">
-    </div>
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    if (username === 'admin' && password === '1234') {
+        document.getElementById('message').textContent = 'Login bem-sucedido!';
+        document.getElementById('message').style.color = 'green';
+    } else {
+        document.getElementById('message').textContent = 'Usuário ou senha incorretos.';
+        document.getElementById('message').style.color = 'red';
+    }
+});
+    </script>
 </body>
-
 </html>
